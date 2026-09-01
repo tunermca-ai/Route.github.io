@@ -608,14 +608,21 @@ Route.Start({
     <div class="step-num">1</div>
     <div class="step-body">
       <h4>Add the package</h4>
-      <p>Sync the <code>Route</code> folder into <code>ServerScriptService</code> with your Rojo project, or insert the provided model directly. Treat it as vendored — update it as a whole rather than hand-editing inside it, the same way you'd treat any other package dependency.</p>
+      <p>Install it with Wally — add it to your <code>wally.toml</code> and run <code>wally install</code>, which drops it into <code>Packages</code> for Rojo to sync in as <code>Route</code>:</p>
+      <div class="code-wrap">
+        <span class="fname">wally.toml</span>
+        <button class="copy-btn" type="button">Copy</button>
+        <pre><code class="lua">[dependencies]
+Route = "tunermca-ai/route@1.0.0"</code></pre>
+      </div>
+      <p>No Wally? Sync the <code>Route</code> folder into <code>ServerScriptService</code> with your Rojo project instead, or insert the provided model directly. Either way, treat it as vendored — update it as a whole rather than hand-editing inside it, the same way you'd treat any other package dependency.</p>
     </div>
   </div>
   <div class="step">
     <div class="step-num">2</div>
     <div class="step-body">
-      <h4>Create your own space beside it</h4>
-      <p>Add a folder next to <code>Route</code> for your own commands — call it anything you like, <code>GameCommands</code>, <code>Admin</code>, whatever fits your project. This is where every game-specific command you write lives, so it's never confused with or overwritten by a future Route update. You don't need <code>Types</code>/<code>Guards</code> subfolders too — see <a href="#/extending">Custom types &amp; guards</a>.</p>
+      <h4>Create a server script</h4>
+      <p>Add a script under <code>ServerScriptService</code> for your own commands — call it anything you like, <code>GameCommands</code>, <code>Admin</code>, whatever fits your project. This is where every game-specific command you write lives, so it's never confused with or overwritten by a future Route update. You don't need <code>Types</code>/<code>Guards</code> subfolders too — see <a href="#/extending">Custom types &amp; guards</a>.</p>
     </div>
   </div>
   <div class="step">
